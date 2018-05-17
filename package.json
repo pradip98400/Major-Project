@@ -1,0 +1,38 @@
+{
+  "name": "mern-secure",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.18.0",
+    "bcrypt-nodejs": "0.0.3",
+    "bluebird": "^3.5.1",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "jquery": "^3.3.1",
+    "jsonwebtoken": "^8.1.1",
+    "mongoose": "^5.0.6",
+    "morgan": "^1.9.0",
+    "passport": "^0.4.0",
+    "passport-jwt": "^3.0.1",
+    "react": "^16.2.0",
+    
+    "react-css-grid": "^2.0.0-0",
+    "react-dom": "^16.2.0",
+    "react-google-login": "^3.0.4",
+    "react-google-login-component": "^0.9.3",
+    "react-load-script": "0.0.6",
+    "react-meta-tags": "^0.3.0",
+    "react-responsive-carousel": "^3.1.33",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.1.1",
+    "serve-favicon": "^2.4.5",
+    "bootstrap": "^4.1.1"
+  },
+  "scripts": {
+    "start": "node ./bin/www",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+
+}

@@ -1,0 +1,28 @@
+.Heading{
+    text-decoration-color: red;
+    text-transform: uppercase;
+  }
+
+/* 
+.navbar-nav{
+  flex-direction: row;
+} */
+
+
+/* .navbar-header{
+  float: left;
+} */
+
+
+.navbar-nav > li{
+  margin-left:30px;
+  margin-right:30px;
+}
+
+
+
+  /* .homeBackground{
+    background-image: url(https://topbackgroundwallpaper.com/wp-content/uploads/2018/01/wallpaper-website-background-different-backgrounds-website-sphere-beautiful-background-web-wallpapers.jpg);
+  }
+  */
+  
