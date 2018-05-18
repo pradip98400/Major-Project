@@ -2,6 +2,19 @@ import React,{Component} from 'react';
 import './Feeds.css';
 
 export default class Feeds extends Component{
+    state={
+        response:''
+    }
+
+    displayTitle(id){
+        console.log(id)
+        var x=document.getElementById(id);
+        // console.log(x);
+        // alert(x.textContent);
+        this.setState({
+            response: x.textContent
+        });
+    }
     render(){
         return(
             <div>
@@ -13,49 +26,49 @@ export default class Feeds extends Component{
                                 {/*Feeds*/}
                                 <thead>
                                     <tr>
-                                    <th scope="col"></th>
-                                    <th scope="col">Feeds</th>
+                                        <th scope="col"></th>
+                                        <th scope="col">Feeds</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                    <th scope="row">1</th>
-                                    <td>Top Stories</td>
+                                        <th scope="row">1</th>
+                                        <td id="comment" onClick={()=>this.displayTitle("comment")}>Top Stories</td>
                                     </tr>
                                     <tr>
-                                    <th scope="row">2</th>
-                                    <td>New Questions</td>
+                                        <th scope="row">2</th>
+                                        <td id="question" onClick={()=>this.displayTitle("question")}>New Questions</td>
                                     </tr>
                                     <tr>
-                                    <th scope="row">3</th>
-                                    <td colspan="2">Bookmarked Answers</td>
+                                        <th scope="row">3</th>
+                                        <td colspan="2" id="bookmarked" onClick={()=>this.displayTitle("bookmarked")}>Bookmarked Answers</td>
                                     </tr>
                                 </tbody>
                                 {/* Links*/}
                                 <thead>
                                     <tr>
-                                    <th scope="col"></th>
-                                    <th scope="col">Links</th>
+                                        <th scope="col"></th>
+                                        <th scope="col">Links</th>
                                     </tr>
                                  </thead>
                                  <tbody>
                                     <tr>
-                                    <th scope="row">1</th>
-                                    <td>Information technology</td>
+                                        <th scope="row">1</th>
+                                        <td>Information technology</td>
                                     </tr>
                                     <tr>
-                                    <th scope="row">2</th>
-                                    <td>Health</td>
+                                        <th scope="row">2</th>
+                                        <td>Health</td>
                                     </tr>
                                     <tr>
-                                    <th scope="row">3</th>
-                                    <td colspan="2">Science</td>
+                                        <th scope="row">3</th>
+                                        <td colspan="2">Science</td>
                                     </tr>
                                  </tbody>
                                 </table>
                         </div>
                         <div class="col-sm-7">
-                            One of three columns
+                            {this.state.response}
                         </div>
                         <div class="col-sm-2">
                             Improve Your Feed
