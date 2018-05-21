@@ -72,7 +72,7 @@ export default class Feeds extends Component{
                             {this.state.response}
                         </div>
                         <div class="col-sm-3">
-                           <strong> Improve Your Feed </strong>
+                           <strong> Latest Tech News </strong>
                             <News/>
                         </div>
                     </div>
