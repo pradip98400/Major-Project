@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
 import './Feeds.css';
+import News from "./News";
 
 export default class Feeds extends Component{
     state={
@@ -67,11 +68,12 @@ export default class Feeds extends Component{
                                  </tbody>
                                 </table>
                         </div>
-                        <div class="col-sm-7">
+                        <div class="col-sm-6">
                             {this.state.response}
                         </div>
-                        <div class="col-sm-2">
-                            Improve Your Feed
+                        <div class="col-sm-3">
+                           <strong> Improve Your Feed </strong>
+                            <News/>
                         </div>
                     </div>
                 </div>
