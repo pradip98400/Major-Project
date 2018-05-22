@@ -6,16 +6,27 @@ export default class News extends Component{
       };
 
 componentDidMount(){
-    fetch('https://newsapi.org/v2/top-headlines?country=us&category=technology&apiKey=53e60aeb7b3849c3bf4183582c0f935b').
+    fetch('https://newsapi.org/v2/top-headlines?country=us&category=technology&apiKey=f26ffb5634314b43828dc583475cdb03').
     then((Response)=>Response.json()).
     then(data =>{
-        let movies = data.articles.map((item)=>{
-            console.log(item);
 
-            return (
-                    <li> {item.description}</li>
-                );
-        });
+        let movies=[];
+        
+        
+        for(var i=0;i<data.articles.length;i++){
+          //movies=data.articles[i].description;
+           movies.push(data.articles[i].description);
+       
+        }
+        // let movies=[];
+        //  movies = data.articles.map((item)=>{
+        //     console.log(item.description);
+
+        //     return (
+        //             movies.push
+        //         );
+        // });
+        //console.log(movies)
         this.setState({movie:movies});
     
     })
@@ -23,19 +34,27 @@ componentDidMount(){
 
 render(){
     var arr=[];
-    if(this.state.movie!=null){
     for(var i=0;i<5;i++){     
+      if(this.state.movie[i]!=null){
       arr.push(this.state.movie[i]);
     }
+  }
+//  console.log("MOvie",this.state.movie);
+  console.log("Arr",arr);
+  var namesList = arr.map(function(movie){
+    return <div>
+    <hr/><li>{movie}</li></div>;
+  })
     return(
             <div>
                
-                    <li className="list-group-item list-group-item-secondary">
-                        {arr}
+                    <li className="list-group-item list-group-item-secondary row">
+                        {namesList}
+            
                     </li>
                
             </div>
         );
     }
-    }
+    
 }

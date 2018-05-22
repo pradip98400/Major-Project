@@ -73,6 +73,7 @@ export default class Feeds extends Component{
                         </div>
                         <div class="col-sm-3 textalign">
                            <strong> Latest Tech News </strong>
+                           
                             <News/>
                         </div>
                     </div>
