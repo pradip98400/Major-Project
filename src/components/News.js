@@ -43,7 +43,11 @@ render(){
   console.log("Arr",arr);
   var namesList = arr.map(function(movie){
     return <div>
-    <hr/><li>{movie}</li></div>;
+    <hr/>
+        <li>{movie.substring(0,50)}
+        <span>...<a href="/home">Continue Reading</a></span>
+        </li>
+    </div>;
   })
     return(
             <div>
