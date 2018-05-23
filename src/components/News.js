@@ -1,8 +1,11 @@
 import React,{Component} from "react";
+import "./Feeds.css";
 
 export default class News extends Component{
     state = {
-        movie :[]
+        movie :[],
+        newsImage:[],
+        data:[]
       };
 
 componentDidMount(){
@@ -11,13 +14,19 @@ componentDidMount(){
     then(data =>{
 
         let movies=[];
+        let feedsImage=[];
         
-        
-        for(var i=0;i<data.articles.length;i++){
-          //movies=data.articles[i].description;
-           movies.push(data.articles[i].description);
+        this.setState({data:data.articles});
+
+        // for(var i=0;i<data.articles.length;i++){
+        //   //movies=data.articles[i].description;
+        //    movies.push(data.articles[i].description);
+        //    newsImage.push(data.articles[i].urlToImage);
        
-        }
+        // }
+
+
+        
         // let movies=[];
         //  movies = data.articles.map((item)=>{
         //     console.log(item.description);
@@ -27,7 +36,14 @@ componentDidMount(){
         //         );
         // });
         //console.log(movies)
-        this.setState({movie:movies});
+        this.setState({movie:movies,newsImage:feedsImage});
+        let elm=[];
+        for(var i=0;i<5;i++){
+          elm.push(this.state.data[i])
+        }
+        // this.setState({data:elm})
+        console.log("elm",elm)
+        this.setState({data:elm})
     
     })
 }
@@ -39,26 +55,64 @@ render(){
       arr.push(this.state.movie[i]);
     }
   }
-//  console.log("MOvie",this.state.movie);
-  console.log("Arr",arr);
-  var namesList = arr.map(function(movie){
-    return <div>
-    <hr/>
-        <li>{movie.substring(0,50)}
-        <span>...<a href="/home">Continue Reading</a></span>
-        </li>
-    </div>;
-  })
-    return(
-            <div>
+  return (
+    <div>
+      {this.state.data.map(function(item, key) {
+             
+               return (
+                      <div className="list-group-item list-group-item-secondary row">
+                      <hr/>
+                      <div >
+                      <li>
+                            {item.title}
+                            <span>...<a href={item.url}>Continue Reading</a></span>
+                      </li>
+                      <img src={item.urlToImage} class="square"/>
+                      </div>
+                     </div> 
+                
+                )
+             
+             })}
+             </div>
+            )
+          }
+        }
+
+
+
+
+
+
+
+// render(){
+//     var arr=[];
+//     for(var i=0;i<5;i++){     
+//       if(this.state.movie[i]!=null){
+//       arr.push(this.state.movie[i]);
+//     }
+//   }
+// //  console.log("MOvie",this.state.movie);
+//   console.log("Arr",arr);
+//   var namesList = arr.map(function(movie){
+//     return <div>
+//     <hr/>
+//         <li>{movie.substring(0,50)}
+//         <span>...<a href="/home">Continue Reading</a></span>
+//         </li>
+//     </div>;
+//   })
+//     return(
+//             <div>
                
-                    <li className="list-group-item list-group-item-secondary row">
-                        {namesList}
+//                     <li className="list-group-item list-group-item-secondary row">
+//                     <li>{item.description}</li>
+//                     <img src={item.urlToImage}/>
             
-                    </li>
+//                     </li>
                
-            </div>
-        );
-    }
+//             </div>
+//         );
+//     }
     
-}
+// }
