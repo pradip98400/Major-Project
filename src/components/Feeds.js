@@ -1,10 +1,11 @@
 import React,{Component} from 'react';
 import './Feeds.css';
 import News from "./News";
+import Query from "./Query";
 
 export default class Feeds extends Component{
     state={
-        response:''
+        response:""
     }
 
     displayTitle(id){
@@ -12,11 +13,25 @@ export default class Feeds extends Component{
         var x=document.getElementById(id);
         // console.log(x);
         // alert(x.textContent);
-        this.setState({
-            response: x.textContent
-        });
+        if(x.textContent=="question"){
+            this.setState({
+                response: "question"
+            });
+        }
+        console.log(this.state.response)
+
     }
+
+ displaytitle(){
+        //console.log("dfdfoil",this.state.response)
+        if(this.state.response!="question"){
+            return(
+            <Query/>)
+        }
+    }
+
     render(){
+ 
         return(
             <div>
                     <div class="container">
@@ -38,7 +53,11 @@ export default class Feeds extends Component{
                                     </tr>
                                     <tr>
                                         <th scope="row">2</th>
-                                        <td id="question" onClick={()=>this.displayTitle("question")}>New Questions</td>
+                                        <td id="question" onClick={()=>this.displayTitle("question")}>New Questions
+                                        
+                                        </td>
+                                        
+                                        
                                     </tr>
                                     <tr>
                                         <th scope="row">3</th>
@@ -69,7 +88,7 @@ export default class Feeds extends Component{
                                 </table>
                         </div>
                         <div class="col-sm-6">
-                            {this.state.response}
+                            {this.displaytitle()}
                         </div>
                         <div class="col-sm-3 textalign">
                            <strong> Latest Tech News </strong>
