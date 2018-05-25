@@ -18,23 +18,7 @@ componentDidMount(){
         
         this.setState({data:data.articles});
 
-        // for(var i=0;i<data.articles.length;i++){
-        //   //movies=data.articles[i].description;
-        //    movies.push(data.articles[i].description);
-        //    newsImage.push(data.articles[i].urlToImage);
-       
-        // }
 
-
-        
-        // let movies=[];
-        //  movies = data.articles.map((item)=>{
-        //     console.log(item.description);
-
-        //     return (
-        //             movies.push
-        //         );
-        // });
         //console.log(movies)
         this.setState({movie:movies,newsImage:feedsImage});
         let elm=[];

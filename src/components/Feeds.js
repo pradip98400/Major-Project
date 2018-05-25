@@ -2,6 +2,8 @@ import React,{Component} from 'react';
 import './Feeds.css';
 import News from "./News";
 import Query from "./Query";
+import Stories from "./Stories";
+import Bookmarked from "./Boomarked";
 
 export default class Feeds extends Component{
     state={
@@ -13,24 +15,47 @@ export default class Feeds extends Component{
         var x=document.getElementById(id);
         // console.log(x);
         // alert(x.textContent);
-        if(x.textContent=="question"){
+        if(id=="question"){
             this.setState({
                 response: "question"
+            });
+        }
+        else if(id=="stories"){
+            this.setState({
+                response: "stories"
+            });
+        }
+        else if(id=="bookmarked"){
+            this.setState({
+                response: "bookmarked"
             });
         }
         console.log(this.state.response)
 
     }
 
- displaytitle(){
-        //console.log("dfdfoil",this.state.response)
-        if(this.state.response!="question"){
+     displaytitle(){
+        console.log("dfdfoil",this.state.response)
+        if(this.state.response=="question"){
             return(
             <Query/>)
         }
+        else if(this.state.response=="stories"){
+            return(
+                <Stories/>
+            )
+        }
+        else if(this.state.response=="bookmarked"){
+            return(
+                <Bookmarked/>
+            )
+        }
     }
 
+
+
     render(){
+
  
         return(
             <div>
@@ -49,13 +74,11 @@ export default class Feeds extends Component{
                                 <tbody>
                                     <tr>
                                         <th scope="row">1</th>
-                                        <td id="comment" onClick={()=>this.displayTitle("comment")}>Top Stories</td>
+                                        <td id="comment" onClick={()=>this.displayTitle("stories")}>Top Stories</td>
                                     </tr>
                                     <tr>
                                         <th scope="row">2</th>
-                                        <td id="question" onClick={()=>this.displayTitle("question")}>New Questions
-                                        
-                                        </td>
+                                        <td id="question" onClick={()=>this.displayTitle("question")}>New Questions</td>
                                         
                                         
                                     </tr>
@@ -88,11 +111,13 @@ export default class Feeds extends Component{
                                 </table>
                         </div>
                         <div class="col-sm-6">
-                            {this.displaytitle()}
+                            {
+                                this.displaytitle()
+                        }
                         </div>
                         <div class="col-sm-3 textalign">
                            <strong> Latest Tech News </strong>
-                           
+                            
                             <News/>
                         </div>
                     </div>
