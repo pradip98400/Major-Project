@@ -8,7 +8,7 @@ export default class Query extends Component{
         return(
             //div le enclosed gar hai, return bhitra yeuta matra tag le enclosed garnu parcha and nested garna pauchas
             <div>
-                <p>Oi Puskar Chor yeta kaam gar tero Query ko</p>
+                <p className="purple">Oi Puskar Chor yeta kaam gar tero Query ko</p>
             </div>
         )
     }

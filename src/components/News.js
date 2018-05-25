@@ -8,7 +8,7 @@ export default class News extends Component{
         data:[]
       };
 
-componentDidMount(){
+fetchResult =() => {
     fetch('https://newsapi.org/v2/top-headlines?country=us&category=technology&apiKey=f26ffb5634314b43828dc583475cdb03').
     then((Response)=>Response.json()).
     then(data =>{
@@ -30,6 +30,11 @@ componentDidMount(){
         this.setState({data:elm})
     
     })
+}
+
+componentDidMount(){
+    this.fetchResult()
+    setInterval(this.fetchResult, 30000);
 }
 
 render(){

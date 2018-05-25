@@ -1,6 +1,5 @@
 import React,{Component} from 'react';
 //styling ko lagi css ne import gardeko chu Query.css
-import "./Query.css";
 export default class Stories extends Component{
 
     render(){
