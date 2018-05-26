@@ -33,7 +33,11 @@ class query extends Component {
           <button class="btn btn-lg btn-primary btn-block" type="submit">Ask</button>
           
         </form>
+        <section>
+          <h2> here we will show the posts</h2>
+        </section>
       </div>
+      
     );
   }
 }
