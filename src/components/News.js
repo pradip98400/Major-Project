@@ -17,8 +17,6 @@ fetchResult =() => {
         let feedsImage=[];
         
         this.setState({data:data.articles});
-
-
         //console.log(movies)
         this.setState({movie:movies,newsImage:feedsImage});
         let elm=[];
@@ -49,9 +47,9 @@ render(){
       {this.state.data.map(function(item, key) {
              
                return (
-                      <div className="list-group-item list-group-item-secondary row">
-                      <hr/>
                       <div >
+                      <hr/>
+                      <div className="list-group-item list-group-item-secondary row">
                       <li>
                             {item.title}
                             <span>...<a href={item.url}>Continue Reading</a></span>
