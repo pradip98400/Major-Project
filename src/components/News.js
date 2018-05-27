@@ -24,7 +24,7 @@ fetchResult =() => {
           elm.push(this.state.data[i])
         }
         // this.setState({data:elm})
-        console.log("elm",elm)
+        //console.log("elm",elm)
         this.setState({data:elm})
     
     })
@@ -47,9 +47,9 @@ render(){
       {this.state.data.map(function(item, key) {
              
                return (
-                      <div >
-                      <hr/>
                       <div className="list-group-item list-group-item-secondary row">
+                      <hr/>
+                      <div >
                       <li>
                             {item.title}
                             <span>...<a href={item.url}>Continue Reading</a></span>
