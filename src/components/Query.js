@@ -35,24 +35,23 @@ componentDidMount(){
     
     return (
       <div class="container">
-        <form class="form-signin" action="http://localhost:5000/queries" method="POST">
-          <h2 class="form-signin-heading" color="blue">Want to ask something? ask here!</h2>
+        <form  class= "postcss" action="http://localhost:5000/queries" method="POST">
+          <h3  color ="blue">Want to ask something? ask here!</h3>
          
           <label for="inputQuery" class="sr-only">query</label> 
-          <input type="text" class="form-control" placeholder="want to ask something? ask here!" name="userquery" required/>
+          <input type="text" class="querycss" placeholder="Want to ask something? Ask here!" name="userquery" required/>
         
-          <button class="btn btn-lg btn-primary btn-block" >Ask</button>
-          
+          <button class="btn btn-lg btn-primary button_position" >Ask</button>
         </form>
         <section>
-          <h2> here we will show the posts</h2>
+                <h2 > Recent Queries</h2>
         </section>
         {this.state.queries.map(function(item, key) {
           return(
-        <div>
+            <div class="container">
 
         <hr/>
-        <div  className="list-group-item list-group-item-secondary row">
+        <div className="list-group-item list-group-item-secondary row posting_style  " >
         {item.query}
         </div>
          

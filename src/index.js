@@ -6,6 +6,7 @@ import registerServiceWorker from './registerServiceWorker';
 import Login from './components/Login';
 import Register from './components/Register';
 import Home from './components/Home';
+import Expert from './components/expert';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -18,6 +19,7 @@ ReactDOM.render(
         <Route exact path='/' component={Login} />
         <Route path='/register' component={Register} />
         <Route path='/home' component={Home} />
+        <Route path='/expert' component={Expert} />
       </div>
   </Router>,
   document.getElementById('root')

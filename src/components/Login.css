@@ -25,6 +25,20 @@
           box-sizing: border-box;
   padding: 10px;
   font-size: 16px;
+  margin-bottom:10px;
+}
+.querycss {
+  position: static;
+  height: 150px;
+  width:420px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 16px;
+  margin-bottom: 10px;
+  border-bottom-left-radius: 4mm;
+  border-top-left-radius: 4mm;
+  border-bottom-right-radius: 4mm;
+  border-top-right-radius: 4mm;
 }
 .form-signin .form-control:focus {
   z-index: 2;
@@ -41,4 +55,25 @@
 }
 .form-signin p {
   margin-top: 10px;
+}
+
+
+.container{
+max-width: 1250;
+margin-right: 20px;
+}
+.postcss{
+  max-width: 330px;
+  padding: 15px;
+}
+
+.button_position{
+  margin-left:125%;
+}
+.posting_style{
+  border-bottom-left-radius: 4mm;
+  border-top-left-radius: 4mm;
+  border-bottom-right-radius: 4mm;
+  border-top-right-radius: 4mm;
+  margin-bottom: 10px;
 }

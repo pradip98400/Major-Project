@@ -67,31 +67,32 @@ export default class Feeds extends Component{
                                 {/*Feeds*/}
                                 <thead>
                                     <tr>
-                                        <th scope="col"></th>
+                                    <th scope="col"></th>
                                         <th scope="col">Feeds</th>
+                                        {/* <th scope="col">Feeds</th> */}
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <th scope="row">1</th>
-                                        <td id="comment" onClick={()=>this.displayTitle("stories")}>Top Stories</td>
+                                        <td id="comment" onClick={()=>this.displayTitle("stories")}>Top Queries</td>
                                     </tr>
                                     <tr>
                                         <th scope="row">2</th>
-                                        <td id="question" onClick={()=>this.displayTitle("question")}>New Questions</td>
+                                        <td id="question" onClick={()=>this.displayTitle("question")}>Queryboard</td>
                                         
                                         
                                     </tr>
                                     <tr>
                                         <th scope="row">3</th>
-                                        <td colspan="2" id="bookmarked" onClick={()=>this.displayTitle("bookmarked")}>Bookmarked Answers</td>
+                                        <td colspan="2" id="bookmarked" onClick={()=>this.displayTitle("bookmarked")}>Upvoted answer</td>
                                     </tr>
                                 </tbody>
                                 {/* Links*/}
                                 <thead>
                                     <tr>
                                         <th scope="col"></th>
-                                        <th scope="col">Links</th>
+                                        <th scope="col">Other topics</th>
                                     </tr>
                                  </thead>
                                  <tbody>

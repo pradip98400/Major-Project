@@ -16,17 +16,17 @@ var querySchema = new mongoose.Schema({
 
 var Query =mongoose.model("Query",querySchema);
 
-Query.create({
-    query:"hey my name is wosti"
-},function(err,query){
-    if(err){
-        console.log(err);
-    }
-    else{
-        console.log("Newly created Query");
-        console.log(query);
-    }
-});
+// Query.create({
+//     query:"hey my name is wosti"
+// },function(err,query){
+//     if(err){
+//         console.log(err);
+//     }
+//     else{
+//         console.log("Newly created Query");
+//         console.log(query);
+//     }
+// });
 
 //routes
 app.get("/query",function(req,res){
